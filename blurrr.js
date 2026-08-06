@@ -1,4 +1,4 @@
-{
+let response = {
   "status": 200,
   "mechanism": "batchInQuantum",
   "num": 999,
@@ -10,4 +10,6 @@
     "active": true,
     "expiry": "2099-12-31T23:59:59Z"
   }
-}
+};
+
+$done({ body: JSON.stringify(response) });
