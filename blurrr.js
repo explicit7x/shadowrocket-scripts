@@ -4,9 +4,6 @@ var url = $request.url;
 try {
     var obj = JSON.parse(body);
     
-    console.log("Blurrr Unlock Start");
-    console.log("URL: " + url);
-    
     if (obj.blurrrVersion) {
         var config = JSON.parse(obj.blurrrVersion);
         
@@ -40,7 +37,6 @@ try {
     }
     
     body = JSON.stringify(obj);
-    console.log("Unlock Complete");
     
 } catch(e) {
     console.log("Error: " + e);
