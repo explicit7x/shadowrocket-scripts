@@ -1,5 +1,20 @@
-var objc = JSON.parse($response.body);
+// Blurrr Premium Unlock Script
+// Check if response body exists
+var body = $response.body;
+var objc;
 
+// If body exists, parse it, otherwise create new object
+if (body) {
+    try {
+        objc = JSON.parse(body);
+    } catch (e) {
+        objc = {};
+    }
+} else {
+    objc = {};
+}
+
+// Premium unlock response
 objc = {
   "blurrVersion": "1",
   "appVersion": "2.3.57",
