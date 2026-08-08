@@ -1,4 +1,6 @@
-{
+var objc = JSON.parse($response.body);
+
+objc = {
   "blurrVersion": "1",
   "appVersion": "2.3.57",
   "payWalls": "isOpen",
@@ -13,7 +15,7 @@
   "monthlySVIPisOpen": true,
   "config": {
     "isSlience": false,
-    "prerenderThreshold": 6,
+    "prerenderThreshold": 999,
     "userTagPerCountLimit": 99999
   },
   "pre": "premium",
@@ -54,7 +56,8 @@
     "isVIP": true,
     "isSVIP": true,
     "subscriptionStatus": "active",
-    "expiryDate": "2099-12-31T23:59:59Z",
-    "premiumFeatures": ["all"]
+    "expiryDate": "2099-12-31T23:59:59Z"
   }
-}
+};
+
+$done({ body: JSON.stringify(objc) });
